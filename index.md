@@ -26,6 +26,7 @@ az appservice plan create -g $resourceGroup -n $appServicePlan --is-linux --numb
 ```
 
 **Use Cloud Shell to Create a Web App Using a DockerHub Container Image**
+
 Copy the PowerShell commands below and paste them into the Cloud Shell window:
 ```markup
 $app = 'LinuxDockerApp' + (Get-Date).ticks
@@ -38,6 +39,7 @@ We can verify this by navigating to our Azure Portal tab. Click All Resources an
 ![one](/img/one.png) 
 
 **Use Cloud Shell to Update a Web App Container Image from DockerHub to GitHub**
+
 Copy the PowerShell command below and paste it into the Cloud Shell window:
 ```markup
 az webapp config container set --resource-group $resourceGroup --name $app --docker-registry-server-url 'https://github.com/dotnet/dotnet-docker/tree/master/samples/aspnetapp'
